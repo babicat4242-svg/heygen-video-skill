@@ -1,0 +1,4 @@
+interface:
+  display_name: "HeyGen 비디오"
+  short_description: "헤이젠 아바타 영상의 한국어 대본·연출·생성·번역 제작"
+  default_prompt: "$heygen-video를 사용해 주제에 맞는 헤이젠 영상 대본과 제작 지시서를 만들고, 연동이 있으면 영상 생성까지 진행해줘."
