@@ -22,3 +22,24 @@ HeyGen용 한국어 영상 제작·프롬프트 스킬입니다. 씨댄스 2.5�
 - 아바타 발표 대본, 생성 작업 확인, 번역·더빙 준비
 
 씨댄스 전용 API·모델 사양·태그를 HeyGen 기능으로 간주하지 않습니다. 전체 사례 라이브러리의 복제본이 아닙니다. HeyGen 공식 배포 스킬이 아닌 개인 작성 스킬입니다.
+
+
+## Claude에서 사용
+
+### Claude Code
+
+이 저장소의 `heygen-video` 폴더 전체를 `~/.claude/skills/heygen-video/` 위치에 설치합니다. 결과 경로는 `~/.claude/skills/heygen-video/SKILL.md`여야 합니다. 프로젝트 전용 설치는 `.claude/skills/heygen-video/`을 사용합니다. `references/`도 함께 보존하세요.
+
+호출 예: `/heygen-video 첨부 이미지로 인물 동작이 명확한 영상 프롬프트를 만들어줘. 배경음악은 빼줘.`
+
+### Claude 웹·데스크톱 사용자 스킬
+
+[Claude 업로드용 ZIP](dist/heygen-video-claude.zip)을 다운로드해 사용자 스킬 업로드 기능에서 등록하고 활성화합니다. GitHub 저장소 전체 ZIP 대신 이 파일을 사용하세요. 스킬 루트 폴더 안에 SKILL.md와 참고자료가 들어 있습니다.
+
+자연어 요청 예: “heygen-video 스킬로 첨부 이미지의 영상 프롬프트를 작성해줘.” 실제 생성 연결은 별도로 필요합니다. 계정·조직 설정에 따라 사용자 스킬 업로드 기능이 제공되지 않을 수 있습니다.
+
+Codex에서는 기존 `~/.codex/skills/heygen-video/` 설치와 `$heygen-video` 호출을 그대로 사용합니다. Codex용 `agents/openai.yaml`은 Claude 업로드 ZIP에서 제외했습니다.
+
+공식 설치 근거: [Claude Code Skills](https://code.claude.com/docs/en/skills), [Claude 사용자 스킬](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
+
+검증 범위: 패키지 구조·frontmatter·내부 참조를 확인했습니다. Claude 앱에 실제 업로드해 실행하거나 영상 생성을 검증한 것은 아닙니다.
